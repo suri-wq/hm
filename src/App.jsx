@@ -1,7 +1,7 @@
 
 import { Routes, Route } from 'react-router'
 import './App.css'
-import MainPage from './Pages/MainPage'
+import MainPage from './pages/MainPage'
 import Login from './pages/Login'
 import ProductDetail from './pages/ProductDetail'
 import Navbar from './components/Navbar'
