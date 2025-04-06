@@ -36,6 +36,13 @@ const Navbar = ({authenticate, setAuthenticate}) => {
         }
     }
 
+    const search=(event)=>{
+        if(event.key==="Enter"){
+            let keyword = event.target.value;
+            navigate(`/?q=${keyword}`)
+        }
+    }
+
     const menus = [
         'WOMAN',
         'MAN',
@@ -105,7 +112,17 @@ const Navbar = ({authenticate, setAuthenticate}) => {
                 ))}
             </ul>
             <div className='search-area'>
-                <input type="text"/>
+                <input 
+                    type="text" 
+                    onKeyDown={(event)=> {
+                        if (event.key === "Enter"){
+                            const keyword = event.target.value.trim();
+                            if (keyword===""){
+                                alert("검색어를 입력해주세요")
+                                return
+                            } search(event)
+                        }
+                    } }/>
                 <FontAwesomeIcon icon={faMagnifyingGlass} />
             </div>
         </div>
