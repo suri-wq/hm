@@ -1,0 +1,38 @@
+.login-area{
+    text-align: right;
+    cursor: pointer;
+
+}
+
+.logo-area{
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.nav-area{
+    display: flex;
+    justify-content: center;
+}
+
+.nav-area ul{
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-area ul li{
+    margin:10px;
+    cursor: pointer;
+    padding:0;
+}
+
+.search-area{
+    position:absolute;
+    right:5px;
+    margin-top:20px;
+}
+
+.search-area input{
+    border: none;
+    border-bottom:1px solid black;
+}
