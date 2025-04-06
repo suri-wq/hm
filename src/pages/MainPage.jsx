@@ -7,7 +7,7 @@ const MainPage = () => {
 
   const getProducts = async () => {
     try {
-      const res = await fetch('http://localhost:4000/products');
+      const res = await fetch('https://my-json-server.typicode.com/suri-wq/hm/products');
       const data = await res.json();
       console.log('Fetched data:', data);
 

@@ -1,7 +1,7 @@
 .login-area{
     text-align: right;
     cursor: pointer;
-
+    margin:10px;
 }
 
 .logo-area{
@@ -28,7 +28,7 @@
 
 .search-area{
     position:absolute;
-    right:5px;
+    right:10px;
     margin-top:20px;
 }
 

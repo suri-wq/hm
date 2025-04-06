@@ -3,7 +3,7 @@ import React from 'react'
 const ProductCard = ({item}) => {
   return (
     <div className='product-card'>
-        <img className='img' src={item?.img}/>
+        <img className='img' src={item?.img} alt='img'/>
         <div>
             {item?.choice===true?"Conscious Choice":""}
         </div>
