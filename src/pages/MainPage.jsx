@@ -1,34 +1,38 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import ProductCard from '../components/ProductCard';
+import { useNavigate } from 'react-router';
+import { ClipLoader } from 'react-spinners';
 
 const MainPage = () => {
-  const [productList, setProductList] = useState([]);
+    let [loading, setLoading] =useState(true)
+    const [productList, setProductList] = useState([]);
 
-  const getProducts = async () => {
-    try {
-      const res = await fetch('https://my-json-server.typicode.com/suri-wq/hm/products');
-      const data = await res.json();
-      console.log('Fetched data:', data);
+    const getProducts = async () => {
+        try {
+        const res = await fetch('https://my-json-server.typicode.com/suri-wq/hm/products');
+        const data = await res.json();
+        console.log('Fetched data:', data);
 
-      setProductList(data)
-    } catch (error) {
-      console.error('Fetch error:', error);
-    }
-  };
+        setProductList(data)
+        } catch (error) {
+        console.error('Fetch error:', error);
+        }
+    };
 
-  useEffect(() => {
-    getProducts();
-  }, []);
+    useEffect(() => {
+        getProducts();
+    }, []);
 
-  console.log('Current productList state:', productList);
+    console.log('Current productList state:', productList);
 
   return (
     <Container>
+        
         <Row>
-            {productList.map((menu)=>(
-                <Col lg={3}>
-                <ProductCard item={menu}/>
+            {productList.map((menu,index)=>(
+                <Col key={index} lg={3}>
+                    <ProductCard item={menu}/>
                 </Col>
             ))}       
         </Row>
