@@ -35,10 +35,10 @@ const ProductDetail = () => {
       )
         :
       (<Row>
-        <Col xs='12' md='8' lg='8'>
+        <Col xs='12' md='12' lg='8'>
           <img className='product-img' src={productDetail?.img}/>
         </Col>
-        <Col xs='12' md='4' lg='4'>
+        <Col xs='12' md='12' lg='4'>
           <div className='detail-title'>
             <div>{productDetail?.title}</div>
 

@@ -178,11 +178,6 @@ font-size: 24px;
    
 }
 
-.login-container{
-    max-width: 700px !important;
-    display: flex;
-}
-
 
 .product-img{
     width:100%;
@@ -220,6 +215,12 @@ font-size: 24px;
     border-color: black;
   }
 
+.sub-title{
+    font-size: 16px;
+    font-weight: 700;
+    font-stretch: expanded;
+}
+
 @media (max-width: 768px) {
     .burger-menu {
       display: block;
@@ -229,4 +230,26 @@ font-size: 24px;
     .login-area {
       display: none !important;
     }
+  }
+
+  .login-container{
+    display: block;
+  }
+
+  .form-login{
+    width: 100%;
+  }
+
+  .form-signup{
+    width: 100%;
+    margin-left:0;
+  }
+
+  .login-col{
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .logo-area{
+    margin-bottom: 20px;
   }
