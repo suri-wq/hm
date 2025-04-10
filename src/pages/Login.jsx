@@ -11,14 +11,12 @@ const Login = ({setAuthenticate}) => {
     
   }
   return (
-    <Container>
+    <Container className='login-container'>
       <Form onSubmit={submitLogin} className='form-login'>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control type="email" placeholder="Enter email" required />
-          <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
-          </Form.Text>
+          
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -26,10 +24,16 @@ const Login = ({setAuthenticate}) => {
           <Form.Control type="password" placeholder="Password" required/>
         </Form.Group>
         
-        <Button variant="danger" type="submit">
+        <button className='submit-button'>
           Submit
-        </Button>
+        </button>
       </Form>
+      <div className='form-signup'>
+        <div>
+        Sign up to become a member.
+        </div>
+        <button className='signup-button'>Sign up</button>
+      </div>
     </Container>
   )
 }

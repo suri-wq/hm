@@ -113,6 +113,7 @@ const Navbar = ({authenticate, setAuthenticate}) => {
             </ul>
             <div className='search-area'>
                 <input 
+                    placeholder='SEARCH'
                     type="text" 
                     onKeyDown={(event)=> {
                         if (event.key === "Enter"){

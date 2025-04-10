@@ -37,6 +37,30 @@
     margin-top:10px;
     width:100%;
 }
+
+.detail-title{
+    font-size: 20px;
+    margin-top:50px;
+}
+.detail-price{
+    font-weight: 600;
+    margin-bottom: 100px;
+}
+
+.product-add{
+    width:100%;
+    border:1px solid black;
+    background-color: white;
+    font-size: 13px;
+    font-weight: 600;
+    height:50px;
+}
+
+.product-add:hover{
+    background-color: black;
+    color:white;
+}
+
 .side-menu {
     height: 100%;
     width: 0;
@@ -114,8 +138,87 @@ font-size: 24px;
 
 .form-login{
     margin-top:50px;
+    width:40dvw;
+}
+.form-signup{
+    width:40dvw;
+    margin-top:50px;
+    margin-left:10px;
 }
 
+.submit-button{
+    width:100%;
+    border-radius: 0;
+    font-size: 13px;
+    font-weight: 700;
+    height:50px;
+    background-color: black;
+    color:white;
+}
+
+.submit-button:hover{
+    color:black;
+    background-color: white;
+}
+
+
+.signup-button{
+    width:100%;
+    margin-top:10px;
+    background-color: white;
+    border: 1px solid black;
+    height:50px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.signup-button:hover{
+    background-color: black;
+    color:white;
+   
+}
+
+.login-container{
+    max-width: 700px !important;
+    display: flex;
+}
+
+
+.product-img{
+    width:100%;
+}
+.size-radio-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  
+  .size-radio {
+    width: 80px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+    color: black;
+    position: relative;
+    user-select: none;
+  }
+  
+  .size-radio input[type='radio'] {
+    display: none;
+  }
+  
+  .size-radio input[type='radio']:checked + span,
+  .size-radio:has(input[type='radio']:checked) {
+    background-color: black;
+    color: white;
+    border-color: black;
+  }
 
 @media (max-width: 768px) {
     .burger-menu {

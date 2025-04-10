@@ -35,28 +35,40 @@ const ProductDetail = () => {
       )
         :
       (<Row>
-        <Col>
-          <img src={productDetail?.img}/>
+        <Col xs='12' md='8' lg='8'>
+          <img className='product-img' src={productDetail?.img}/>
         </Col>
-        <Col>
+        <Col xs='12' md='4' lg='4'>
           <div className='detail-title'>
-            <h4>{productDetail?.title}</h4>
+            <div>{productDetail?.title}</div>
 
             </div>
           <div className='detail-price'>
-            <h5>{productDetail?.price} KRW</h5>
+            <div>{productDetail?.price} KRW</div>
           </div>
           
           <div>
-            <Form.Select size="sm">
-                <option>-</option>
-              {productDetail?.size.map((size)=>(
-                <option>{size}</option>
-              ))}
-            </Form.Select>
+            <div>
+              SELECT SIZE
+            </div>
+           
+            <Form>
+              <div className="size-radio-group">
+                {productDetail?.size.map((size, idx) => (
+                  <label key={idx} className="size-radio">
+                    <input
+                      type="radio"
+                      name="size"
+                      value={size}
+                    />
+                    {size}
+                  </label>
+                ))}
+              </div>
+            </Form>
           </div>
-          <div className="d-grid gap-2 mt-2">
-            <Button variant='danger'>추가</Button>
+          <div className="d-grid gap-2 mt-4">
+            <button className='product-add'>추가</button>
           </div>
           
           
